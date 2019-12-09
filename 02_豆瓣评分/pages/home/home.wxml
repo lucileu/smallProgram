@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<view class="search-wrapper">
+    <view class="search">
+        <image src="/assets/imgs/ic_search.png" />
+        搜索  
+    </view>
+</view>
+<view class="main">
+    <view class="row">
+        <view class="title-wrapper">
+            <view class="title">影院热映</view>
+            <view class="more">查看更多<view class="arrow"></view></view>
+        </view>
+        <view class="items"></view>
+    </view>
+</view>
