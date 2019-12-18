@@ -49,4 +49,44 @@
     border-top: none;
     border-left: none;
     margin-left: 6rpx;
+    margin-bottom: 40rpx;
+}
+
+.items {
+    display: flex;
+    overflow-x: auto;
+}
+
+.items .item {
+    display: inline-block;
+    /* display: inline-flex;
+    flex-direction: column; */
+    margin-left: 15rpx;
+}
+
+.item .photo {
+    width: 210rpx;
+    height: 310rpx;
+    margin-bottom: 6rpx;
+}
+
+.item .title {
+    font-weight: bold;
+    font-size: 30rpx;
+}
+
+.item .score {
+    display: flex;
+    align-items: center;
+    color: #b2b2b2;
+}
+
+.item .stars {
+    display: flex;
+    margin-left: 6rpx;
+}
+
+.stars .star {
+    width: 26rpx;
+    height: 26rpx;
 }

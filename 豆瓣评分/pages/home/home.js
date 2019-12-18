@@ -4,8 +4,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.loadCity(this.loadData);
-    wx.db.toastError('获取热映失败');
+    // this.loadCity(this.loadData);
+    
   },
   loadData: function (city) {
     wx.request({
