@@ -11,6 +11,21 @@
             <view class="title">影院热映</view>
             <view class="more">查看更多<view class="arrow"></view></view>
         </view>
-        <view class="items"></view>
+        <view class="items">
+            <view class="item">
+                <image class="photo" src="http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2575158172.jpg" />
+                <view class="title">我和我的祖国</view>
+                <view class="score">
+                    <view class="stars">
+                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
+                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
+                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
+                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
+                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
+                    </view>
+                    9.6
+                </view>  
+            </view>
+        </view>
     </view>
 </view>
