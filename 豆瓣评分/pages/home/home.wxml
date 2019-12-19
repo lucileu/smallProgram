@@ -6,16 +6,16 @@
     </view>
 </view>
 <view class="main">
-    <view class="row">
+    <view wx:for="{{ allMovies }}" wx:key="unique" class="row">
         <view class="title-wrapper">
-            <view class="title">影院热映</view>
+            <view class="title">{{ item.title }}</view>
             <view class="more">
                 查看更多
                 <view class="arrow"></view>
             </view>
         </view>
         <scroll-view class="items" scroll-x="true">
-            <view wx:for="{{ movies }}" class="item" wx:for-item="movie" wx:key="unique">
+            <view wx:for="{{ item.movies }}" class="item" wx:for-item="movie" wx:key="unique">
                 <image class="photo" src="{{ movie.images.large }}" />
                 <view class="title">{{ movie.title }}</view>
                 <view class="score">

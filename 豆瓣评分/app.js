@@ -2,6 +2,9 @@
 App({
   onLaunch: function () {
     wx.db = {};
+    wx.db.url = (url) => {
+      return `https://douban-api.uieee.com/${url}`
+    }
     this.initToast();
   },
 
