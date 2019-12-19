@@ -2,7 +2,6 @@
 App({
   onLaunch: function () {
     wx.db = {};
-
     this.initToast();
   },
 
