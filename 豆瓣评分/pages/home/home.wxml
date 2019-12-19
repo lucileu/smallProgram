@@ -1,31 +1,40 @@
-<!--pages/home/home.wxml-->
+<!-- pages/home/home.wxml -->
 <view class="search-wrapper">
     <view class="search">
         <image src="/assets/imgs/ic_search.png" />
-        搜索  
+        搜索
     </view>
 </view>
 <view class="main">
     <view class="row">
         <view class="title-wrapper">
             <view class="title">影院热映</view>
-            <view class="more">查看更多<view class="arrow"></view></view>
-        </view>
-        <view wx:for="{{ 20 }}" class="items">
-            <view class="item">
-                <image class="photo" src="http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2575158172.jpg" />
-                <view class="title">我和我的祖国</view>
-                <view class="score">
-                    <view class="stars">
-                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
-                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
-                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
-                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
-                        <image class="star" src="/assets/imgs/rating_star_small_on.png" />
-                    </view>
-                    9.6
-                </view>  
+            <view class="more">
+                查看更多
+                <view class="arrow"></view>
             </view>
         </view>
+        <scroll-view class="items" scroll-x="true">
+            <view wx:for="{{ movies }}" class="item" wx:for-item="movie" wx:key="unique">
+                <image class="photo" src="{{ movie.images.large }}" />
+                <view class="title">{{ movie.title }}</view>
+                <view class="score">
+                    <block wx:if="{{ movie.stars }}">
+                        <view class="stars">
+                            <!-- <block wx:for="{{ movie.stars }}" wx:key="unique" wx:for-item="star">
+                            <image wx:if="{{ star == 1 }}" class="star" src="/assets/imgs/rating_star_small_on.png" />
+                            <image wx:elif="{{ star == 0.5 }}" class="star" src="/assets/imgs/rating_star_small_half.png" />
+                            <image wx:else class="star" src="/assets/imgs/rating_star_small_off.png" />
+                        </block> -->
+                            <image wx:for="{{ movie.stars.on }}" wx:key="unique" class="star" src="/assets/imgs/rating_star_small_on.png" />
+                            <image wx:if="{{ movie.stars.half }}" class="star" src="/assets/imgs/rating_star_small_half.png" />
+                            <image wx:for="{{ movie.stars.off }}" wx:key="unique" class="star" src="/assets/imgs/rating_star_small_off.png" />
+                        </view>
+                        {{ movie.rating.average }}
+                    </block>
+                    <block wx:else>暂无评分</block>
+                </view>
+            </view>
+        </scroll-view>
     </view>
 </view>

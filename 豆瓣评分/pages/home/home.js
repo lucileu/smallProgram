@@ -1,11 +1,14 @@
 // pages/home/home.js
 Page({
+
+  data: {
+    movies: []
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.loadCity(this.loadData);
-    
+    this.loadCity(this.loadData);
   },
   loadData: function (city) {
     wx.request({
@@ -13,7 +16,12 @@ Page({
       data: { city: city },
       header: {'content-type':'json'},
       success: (res) => {
-        console.log(res);
+        let movies = res.data.subjects
+        for (let index = 0; index < movies.length; index++) {
+          this.updataMovie(movies[index]);
+        }
+        this.setData({ movies: movies });
+        console.log(this.data);
       },
       fail: () => {
         wx.db.toastError('获取热映失败');
@@ -48,5 +56,14 @@ Page({
         wx.db.toastError('获取位置失败');
       },
     });
+  },
+  updataMovie: function(movie) {
+    let stars = parseInt(movie.rating.stars);
+    // movie.stars = [1, 1, 1, 0.5, 0];
+    if (stars == 0) return;
+    movie.stars = {};
+    movie.stars.on = parseInt(stars / 10);
+    movie.stars.half = stars - (movie.stars.on * 10);
+    movie.stars.off = parseInt((50 - stars) / 10);
   }
 })
