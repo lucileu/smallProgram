@@ -9,7 +9,7 @@
     <view wx:for="{{ allMovies }}" wx:key="unique" class="row">
         <view class="title-wrapper">
             <view class="title">{{ item.title }}</view>
-            <view class="more">
+            <view data-index="{{ index }}" bind:tap="viewMore" class="more">
                 查看更多
                 <view class="arrow"></view>
             </view>

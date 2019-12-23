@@ -3,15 +3,14 @@
     "pages/home/home",
     "pages/profile/profile",
     "pages/login/login",
-    "pages/agreement/agreement"
+    "pages/agreement/agreement",
+    "pages/list/list"
   ],
-
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于囍乐微甜小程序位置接口的效果展示" 
+      "desc": "你的位置信息将用于囍乐微甜小程序位置接口的效果展示"
     }
   },
-
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
