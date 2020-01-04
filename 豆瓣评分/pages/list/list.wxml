@@ -1,10 +1,11 @@
 <!-- pages/list/list.wxml -->
 <viwe class="container">
-    <movie-item class="item"
-                wx:for="{{ movies }}" 
-                wx:for-item="movie" 
-                wx:key="unique" 
-                movie="{{ movie }}"></movie-item>
-    <view wx:if="{{ movies.length % 3 > 0 }}" class="item hide" ></view>
-    <view wx:if="{{ movies.length % 3 == 1 }}" class="item hide" ></view>
+    <view class="item"
+        wx:for="{{ movies }}" 
+        wx:for-item="movie" 
+        wx:key="unique">
+        <movie-item movie="{{ movie }}"></movie-item>  
+    </view>
+    
+    
 </viwe>
