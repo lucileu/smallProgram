@@ -15,12 +15,11 @@
             </view>
         </view>
         <scroll-view class="items" scroll-x="true">
-            <movie-item class="item" 
-                name="yj"
-                size="18"
+            <movie-item class="item"
                 wx:for="{{ item.movies }}" 
                 wx:for-item="movie" 
-                wx:key="unique">
+                wx:key="unique" 
+                movie="{{ movie }}">
             </movie-item>
         </scroll-view>
     </view>

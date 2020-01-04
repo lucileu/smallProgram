@@ -11,6 +11,10 @@ Component({
     size: {
       type: Number,
       value: 0
+    },
+    movie: {
+      type: Object,
+      value: null
     }
   },
 

@@ -13,5 +13,4 @@
         </block>
         <block wx:else>暂无评分</block>
     </view>
-    {{ name }} + {{ size }}
 </view>
