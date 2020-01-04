@@ -29,6 +29,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    detail: function() {
+      wx.navigateTo({
+        url: `/pages/detail/detail?movie=${JSON.stringify(this.data.movie)}`
+      });
+        
+    }
   }
 })
