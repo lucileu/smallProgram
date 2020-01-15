@@ -6,6 +6,15 @@ App({
       return `https://douban-api.uieee.com/${url}`
     }
     this.initToast();
+
+    const systemInfo = wx.getSystemInfoSync();
+    console.log(systemInfo);
+    wx.db.statusBarHeight = systemInfo.statusBarHeight;
+    if (systemInfo.platform == 'android') {
+      wx.db.navBarHeight = 48;
+    } else {
+      wx.db.navBarHeight = 44;
+    }
   },
 
   initToast: function () {

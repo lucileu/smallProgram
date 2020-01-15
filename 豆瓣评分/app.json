@@ -5,18 +5,45 @@
     "pages/login/login",
     "pages/agreement/agreement",
     "pages/list/list",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/rank/rank"
   ],
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于囍乐微甜小程序位置接口的效果展示"
     }
   },
+  "tabBar": {
+    "color": "#AAAAAA",
+    "selectedColor": "#56B465",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/imgs/ic_tab_home_normal.png",
+        "selectedIconPath": "/assets/imgs/ic_tab_home_active.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "/assets/imgs/ic_tab_subject_normal.png",
+        "selectedIconPath": "/assets/imgs/ic_tab_subject_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/assets/imgs/ic_tab_profile_normal.png",
+        "selectedIconPath": "/assets/imgs/ic_tab_profile_active.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
