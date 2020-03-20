@@ -1,10 +1,15 @@
 <!-- pages/home/home.wxml -->
+<!-- <include src="/template/template.wxml" /> -->
+<!-- <import src="/template/template.wxml" />
+<import src="/template/nav-bar.wxml" />
+<template is="nav-bar" data="{{ showHome: false, showBack: true }}"/> -->
+<!-- <view style="margin-top: {{ heightTop }}px"> -->
 <nav-bar title="首页"
-        statusBarColor="#43bd55"
-        navBarColor="#43bd55"
-        textColor="#fff"
-        back="false"
-        home="false"></nav-bar>
+          statusBarColor="#43bd55"
+          navBarColor="#43bd55"
+          textColor="#fff"
+          back="false"
+          home="false"></nav-bar>
 <view class="search-wrapper">
     <view class="search">
         <image src="/assets/imgs/ic_search.png" />
@@ -30,3 +35,4 @@
         </scroll-view>
     </view>
 </view>
+<!-- </view> -->

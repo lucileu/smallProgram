@@ -1,4 +1,11 @@
 /* cmps/nav-bar/nav-bar.wxss */
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
 .navBar {
     display: flex;
     align-items: center;

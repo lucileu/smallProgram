@@ -28,12 +28,16 @@ Page({
         url: 'v2/movie/top250',
         movies: []
       },
-    ]
+    ],
+
+    heightTop: 0,
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    this.data.heightTop = wx.db.statusBarHeight + wx.db.navBarHeight;
 
     wx.setNavigationBarColor({
       frontColor: '#ffffff',

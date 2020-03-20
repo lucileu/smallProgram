@@ -35,7 +35,8 @@ Component({
    */
   data: {
     statusBarStyle: '',
-    navBarStyle: ''
+    navBarStyle: '',
+    topHeight: 0,
   },
 
   lifetimes: {
@@ -50,6 +51,11 @@ Component({
       color: ${this.data.textColor}
       `;
       this.setData({ statusBarStyle, navBarStyle });
+
+      const topHeight = wx.db.statusBarHeight + wx.db.navBarHeight;
+      this.setData({
+        topHeight
+      });
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行

@@ -2,3 +2,12 @@ page {
     font-size: 28rpx;
 }
 
+/* .nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+} */
+
+/* page {
+  padding-top: 64px;
+} */

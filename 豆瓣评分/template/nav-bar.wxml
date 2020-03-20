@@ -1,0 +1,10 @@
+<template name="nav-bar">
+  <view class="nav-bar">
+    <nav-bar title="首页"
+            statusBarColor="#43bd55"
+            navBarColor="#43bd55"
+            textColor="#fff"
+            back="{{ showBack }}"
+            home="{{ showHome }}"></nav-bar>
+  </view>
+</template>
